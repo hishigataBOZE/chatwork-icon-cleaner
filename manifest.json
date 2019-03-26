@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "チャットワーク アイコン クリーナー",
+  "description": "アイコンをデフォルトに戻します",
+  "version": "0.1.0",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "page_action": {
+    "default_title": "Chatwork Icon Cleaner"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+         "https://www.chatwork.com/*", "https://kcw.kddi.ne.jp/*"
+      ],
+      "css": [],
+      "js": ["js/jquery-2.2.4.min.js","js/script.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "background": {
+    "scripts": []
+  },
+  "options_page": ""
+}
